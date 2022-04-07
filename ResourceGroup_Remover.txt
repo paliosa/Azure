@@ -1,0 +1,5 @@
+## FORÇAR A REMOÇÃO DE RESOURCE GROUP
+
+1º $resource = “nome do resource group”
+2º Get-AzResourceLock | where ResourceGroupName -EQ $resource | Remove-AzResourceLock -Force
+3º Remove-AzResourceGroup -Name $resource -Force -Confirm
